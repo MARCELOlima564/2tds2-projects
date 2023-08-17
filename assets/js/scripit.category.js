@@ -1,4 +1,4 @@
-//Categoria possui vários produtos 
+//Categoria possui vários produtos => 1:n
 class Category {
     constructor(id, name) {
         this.id = id;
@@ -7,6 +7,7 @@ class Category {
     }
 }
 
+//Produto pertence a uma categoria => 1:1
 class Product{
     constructor(id, name, price, category){
         this.id = id;
@@ -25,6 +26,17 @@ class CategoryService {
     addCategory(name) {
         const id = this.nextCategoryId++;
         const category = new Category(id, name);
+        this.categories.push(category);
     }
+}
+
+const categoryList = new CategoryService();
+
+function createCategory(){
+    const categoryName = "Doce";
+
+    categoryList.addCategory(categoryName);
+
+    console.log(categoryList.categories);
 }
 
