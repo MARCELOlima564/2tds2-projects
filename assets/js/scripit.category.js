@@ -30,6 +30,18 @@ class CategoryService {
     }
 }
 
+class ProductService{
+    constructor(){
+        this.products = [];
+        this.nextCategoryId = 0;
+    }
+
+    addProduct(name, price, category){
+        const id = this.nextCategoryId++;
+        const product = new Product(id, name, price, category);
+    }
+}
+
 const categoryList = new CategoryService();
 
 function createCategory(){
