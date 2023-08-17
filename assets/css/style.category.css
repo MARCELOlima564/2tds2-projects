@@ -42,7 +42,8 @@ h2{
     margin-bottom: 0.31rem; /*5px*/
 }
 
-.form-container input[type="text"]{
+.form-container input,
+select{
     width: 100%;
     padding: 0.62rem; /*10px*/
     margin-bottom: 0.62rem; /*10px*/
@@ -51,6 +52,19 @@ h2{
     box-sizing: border-box;
 }
 
+#productInfos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.62rem;
+}
+
+.productInputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
 .btn{
     background-color: #fd1b1b;
     color: #fff;
@@ -65,4 +79,27 @@ h2{
     background-color: #e60e0e;
     color: #fff;
     transform: scale(1.01);
+}
+
+.list-container{
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    max-height: 20rem; /*320px*/
+    overflow-y: auto;
+}
+
+.list-container ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-container li{
+    margin-bottom: 0.62rem;
+    padding: 0.62rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
